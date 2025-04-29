@@ -137,6 +137,17 @@ Başarılıysa aşağıda bulunan görseldeki satırları görmelisiniz:
 Successfully generated proof!
 Successfully verified proof!
 ```
+## 9. Opsiyonel: Proof'u Succinct Ağı Üzerinden Üretmek:
+
+Eğer proof'unuzun Succinct ağına gönderilmesini ve on-chain olarak işlenmesini istiyorsanız, aşağıdaki komutla çalıştırabilirsiniz:
+
+```bash
+SP1_PROVER=network \
+NETWORK_PRIVATE_KEY=0xyourprivatekey \
+NETWORK_RPC_URL=https://rpc.production.succinct.xyz \
+RUST_LOG=info \
+cargo run --release -- --prove
+```
 
 ---
 
