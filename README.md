@@ -15,7 +15,7 @@ Hiçbir hata almadan, birebir uygun şekilde ilerleyebilirsiniz.
 | vCPU                   | En Az 2 vCPU                            |
 
 
-## Sunucu Önerileri
+## Sunucu Önerileri:
 
 **Ücretsiz:**
 
@@ -29,7 +29,7 @@ Hiçbir hata almadan, birebir uygun şekilde ilerleyebilirsiniz.
 
 ---
 
-## 1. Gereksinimleri Kur:
+## 1. Gerekli Güncellemeleri ve Araç Kurulumu:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -57,7 +57,7 @@ sp1up
 
 ---
 
-## 4. SP1 Projesi Oluştur (Fibonacci)
+## 4. SP1 Projesi Oluştur (Fibonacci):
 
 ```bash
 cargo prove new --bare fibonacci
@@ -69,7 +69,7 @@ cd fibonacci
 
 ---
 
-## 5. Programı Derle
+## 5. Programı Derle:
 
 ```bash
 cd program
@@ -78,9 +78,9 @@ cargo prove build
 
 ---
 
-## 6. Wallet Oluştur
+## 6. Wallet Oluştur:
 
-### A. Foundry Kurulumu
+### A. Foundry Kurulumu:
 
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
@@ -102,7 +102,7 @@ cast wallet new
 
 ---
 
-## 7. Programı Test Et
+## 7. Programı Test Et:
 
 ```bash
 cd ../script
@@ -116,7 +116,7 @@ RUST_LOG=info cargo run --release -- --execute
 
 ---
 
-## 8. Proof Üretimi (Keypair ile)
+## 8. Proof Üretimi (Keypair ile):
 
 ```bash
 SP1_PRIVATE_KEY=Private_Keyini_Gir RUST_LOG=info cargo run --release -- --prove
@@ -128,6 +128,8 @@ Komut başarılı çalıştıysa, aşağıdaki görselde yer alan satırları g�
 ![Ekran görüntüsü 2025-04-29 191455](https://github.com/user-attachments/assets/705e900a-97cb-43c1-9d0a-6a290db06e54)
 
 ---
+
+## 10. Formu Doldur:
 
 Artık bu proje ile Succinct Prover Network whitelist [form](https://docs.google.com/forms/d/e/1FAIpQLSd-X9uH7G0bvXH_kjptnQtNil8L4dumrVPpFE4t8Ci1XT1GaQ/viewform)'una başvurabilirsiniz. Herkese başarılar dilerim.
 
