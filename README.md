@@ -124,6 +124,7 @@ SP1_PRIVATE_KEY=Private_Keyini_Gir RUST_LOG=info cargo run --release -- --prove
 - "Private_Keyini_Gir" kısmına, oluşturduğunuz cüzdanın private key'ini girin.
 
 Komut başarılı çalıştıysa, aşağıdaki görselde yer alan satırları görmelisiniz:
+
 ![Ekran görüntüsü 2025-04-29 191455](https://github.com/user-attachments/assets/705e900a-97cb-43c1-9d0a-6a290db06e54)
 
 ---
@@ -132,5 +133,4 @@ Artık bu proje ile Succinct Prover Network whitelist [form](https://docs.google
 
 ---
 
-X Hesabım: [@UfukDegen](https://x.com/UfukDegen) 
-Daha fazla rehber için: https://github.com/UfukNode
+→ Daha fazla rehber için X hesabımı takip edebilirsiniz: [@UfukDegen](https://x.com/UfukDegen) 
