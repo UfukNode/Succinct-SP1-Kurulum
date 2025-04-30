@@ -1,3 +1,4 @@
+<img width="1290" alt="sp1-95bcd700ff147045135ad0d0e96a2722" src="https://github.com/user-attachments/assets/f94acd10-038f-45dd-9248-f03fa0ab4a43" />
 # Succinct SP1 Fibonacci zkVM Programı Kurulum ve Proof Üretim Rehberi
 
 Bu rehberde, SP1 kurulumu yapıp örnek bir zkVM programı derleyerek nasıl proof üreteceğinizi ve ardından whitelist formunu nasıl dolduracağınızı adım adım anlattım.  
@@ -23,7 +24,7 @@ Hiçbir hata almadan, birebir uygun şekilde ilerleyebilirsiniz.
 
 - [https://contabo.com/en/vps/cloud-vps-4c/](https://contabo.com/en/vps/cloud-vps-4c/) → 6$ civarı, en ucuzunu seçebilirsiniz.
 
-> Bu kurulumu boşta duran ya da hâlihazırda çalışan sunucularınız üzerine de yapabilirsiniz.
+> Bu kurulumu boşta duran ya da hâlihazırda çalışan sunucularınız üzerine de yapabilirsiniz. Boşuna para harcamanıza gerek yok.
 
 ---
 
@@ -53,13 +54,6 @@ source ~/.bashrc
 sp1up
 ```
 
-### Kurulumu Doğrula:
-
-```bash
-cargo prove --version
-cargo +succinct --version
-```
-
 ---
 
 ## 4. SP1 Projesi Oluştur (Fibonacci)
@@ -68,6 +62,8 @@ cargo +succinct --version
 cargo prove new --bare fibonacci
 cd fibonacci
 ```
+Örnek Çıktı:
+![image](https://github.com/user-attachments/assets/b60ba49e-0bd7-4cc3-8a7d-796723a38dc7)
 
 ---
 
@@ -97,13 +93,9 @@ cast wallet new
 ```
 
 Örnek çıktı:
+![Adsız tasarım (1)](https://github.com/user-attachments/assets/687817c1-7383-470f-895c-97915560e3ff)
 
-```
-Address:      0xYourAddress
-Private Key:  0xYourPrivateKey
-```
-
-Private key'inizi kimseyle paylaşmayın.
+⚠️ Private key'inizi kaydedin ve kimseyle paylaşmayın.
 
 ---
 
@@ -113,41 +105,22 @@ Private key'inizi kimseyle paylaşmayın.
 cd ../script
 RUST_LOG=info cargo run --release -- --execute
 ```
-Başarılıysa aşağıda bulunan görseldeki satırları görmelisiniz:
+- Başarılıysa en sonunda aşağıda bulunan görseldeki satırları görmelisiniz:
 
-Çıktı:
-
-```
-Program executed successfully.
-a: 6765
-b: 10946
-```
+Örnek Çıktı:
+![image](https://github.com/user-attachments/assets/43a4b1c6-9d11-4e6c-b5bc-e0f7f41dcef4)
 
 ---
 
 ## 8. Proof Üretimi (Keypair ile)
 
 ```bash
-SP1_PRIVATE_KEY=0xyourprivatekey RUST_LOG=info cargo run --release -- --prove
+SP1_PRIVATE_KEY=Private_Keyini_Gir RUST_LOG=info cargo run --release -- --prove
 ```
+- "Private_Keyini_Gir" kısmına, oluşturduğunuz cüzdanın private key'ini girin.
 
-Başarılıysa aşağıda bulunan görseldeki satırları görmelisiniz:
-
-```
-Successfully generated proof!
-Successfully verified proof!
-```
-## 9. Opsiyonel: Proof'u Succinct Ağı Üzerinden Üretmek:
-
-Eğer proof'unuzun Succinct ağına gönderilmesini ve on-chain olarak işlenmesini istiyorsanız, aşağıdaki komutla çalıştırabilirsiniz:
-
-```bash
-SP1_PROVER=network \
-NETWORK_PRIVATE_KEY=0xyourprivatekey \
-NETWORK_RPC_URL=https://rpc.production.succinct.xyz \
-RUST_LOG=info \
-cargo run --release -- --prove
-```
+Komut başarılı çalıştıysa, aşağıdaki görselde yer alan satırları görmelisiniz:
+![Ekran görüntüsü 2025-04-29 191455](https://github.com/user-attachments/assets/705e900a-97cb-43c1-9d0a-6a290db06e54)
 
 ---
 
