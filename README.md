@@ -1,4 +1,5 @@
 <img width="1290" alt="sp1-95bcd700ff147045135ad0d0e96a2722" src="https://github.com/user-attachments/assets/f94acd10-038f-45dd-9248-f03fa0ab4a43" />
+
 # Succinct SP1 Fibonacci zkVM Programı Kurulum ve Proof Üretim Rehberi
 
 Bu rehberde, SP1 kurulumu yapıp örnek bir zkVM programı derleyerek nasıl proof üreteceğinizi ve ardından whitelist formunu nasıl dolduracağınızı adım adım anlattım.  
@@ -63,6 +64,7 @@ cargo prove new --bare fibonacci
 cd fibonacci
 ```
 Örnek Çıktı:
+
 ![image](https://github.com/user-attachments/assets/b60ba49e-0bd7-4cc3-8a7d-796723a38dc7)
 
 ---
@@ -93,6 +95,7 @@ cast wallet new
 ```
 
 Örnek çıktı:
+
 ![Adsız tasarım (1)](https://github.com/user-attachments/assets/687817c1-7383-470f-895c-97915560e3ff)
 
 ⚠️ Private key'inizi kaydedin ve kimseyle paylaşmayın.
@@ -108,6 +111,7 @@ RUST_LOG=info cargo run --release -- --execute
 - Başarılıysa en sonunda aşağıda bulunan görseldeki satırları görmelisiniz:
 
 Örnek Çıktı:
+
 ![image](https://github.com/user-attachments/assets/43a4b1c6-9d11-4e6c-b5bc-e0f7f41dcef4)
 
 ---
